@@ -8,11 +8,11 @@ import Border from '../components/Border'
 function Detail() {
   const {id} = useParams()
   const target = data.filter(ele => ele.name === id)
-  const top = target[0].topLevelDomain.map((ele,i) => { 
+  const top = ( target[0].topLevelDomain ? target[0].topLevelDomain.map((ele,i) => { 
     if (i)
       return ', ' + ele
     else
-      return ele}), cur = target[0].currencies.map((ele,i) => { 
+      return ele}) : 'None'), cur = target[0].currencies.map((ele,i) => { 
     if (i)
       return ', ' + ele.name
     else
