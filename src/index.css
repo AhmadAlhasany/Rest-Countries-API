@@ -1,13 +1,149 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*, ::after, ::before{
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  max-width: 100svw;
+  font-family: 'Nunito Sans', sans-serif;
+  min-height: 100vh;
 }
+
+body, .Appd, .Appl { max-width: 100svw; min-height: 100svh;}
+.Home {padding-top: 65px; max-width: 100%;}
+body { margin : 0; }
+
+.rf, .cf {display: flex; align-items: center;}
+.cf {flex-direction: column;}
+
+.nav {user-select: none; z-index: 1; justify-content: space-between; padding: 0px 50px; width: 100%; position: fixed; box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.75); }
+.nav div { justify-content: space-between; width: 100px;}
+.icon { font-size: 16px; }
+.mode:hover {cursor: pointer;}
+.mode p { font-weight: 600; }
+
+.Filters {position: relative; padding: 50px; padding-bottom: 0px; justify-content: space-between; align-items: center;}
+.Filters .Sea {position: absolute; left: 65px;}
+input[type='text']{width: 400px; padding: 10px; padding-left:50px; }
+input, select { outline: none; height: 40px; border: none; border-radius: 5px; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);}
+select {width: 150px; padding: 10px; cursor: pointer; border-right: 10px solid black;}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s;
+}
+
+
+
+.Grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 60px; width: 100%; padding: 50px; height: 100%;}
+.Grid > div {width:100%; height: auto; border-radius: 10px; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75); overflow: hidden;}
+.Grid > div:hover {cursor: pointer;}
+.img {height: 200px; width: 100%;} 
+.an{width: 100%;}
+img {height: 100%; width: 100%; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);}
+.det {width: 100%; padding: 25px; opacity: 0.9;}
+span {font-weight: 600;} 
+strong {font-weight: 800; display: block;}
+
+.but {padding-top: 115px; padding-left: 50px;}
+.arrow {margin-right: 15px;}
+small {font-size: inherit; font-weight: 600;}
+.button {width: 120px; height: 40px; justify-content: center; border-radius: 5px;}
+
+.detail{padding: 50px; align-items: flex-start;}
+.flag{ height: auto ; width: 600px;}
+.acflag { object-fit: fill; width: 100%; height: 100%;}
+.cwrapper {flex-grow: 1; padding-left: 120px;  align-items: flex-start; width: 600px; height: 100%;}
+.rwrapper {width: 100%; align-items: flex-start; margin: 20px 0px;}
+.sa {width: 50% ; margin-bottom: 20px;}
+.mar {margin-bottom: 10px;}
+
+.blo {width: 100%;}
+.blo div { display: inline-block;}
+.border { margin:5px;  padding:7px; width: auto; height: auto;  border-radius: 5px;}
+.border small {font-weight: 300;}
+ 
+a {text-decoration: none; color: inherit;}
+
+/* Here go the styles of the mode */
+
+.Appd { color: white; background-color: #202D36; }
+.Appd .nav, .Appd .button, .Appd .border { background-color: #2B3743; }
+.Appd input { background-color: #2B3743; color : white;}
+.Appd input::placeholder,.Appd .Sea{color: white;}
+.Appd select {background-color: #2B3743; border-right-color: #2B3743; color: white;}
+.Appd input:active {background-color: #2B3743;}
+.Appd .Grid > div {background-color: #2B3743;}
+.Appd .button , .Appd .border{ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);}
+
+.Appl .button, .Appl .border { box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);}
+.Appl { color: black; background-color: hsl(0, 0%, 96%); }
+.Appl .nav { background-color: hsl(0, 0%, 100%); }
+.Appl input { background-color: #FFFFFF; color: #868686;}
+.Appl input::placeholder, .Appl .Sea {color: #868686;}
+.Appl select {background-color: #FFFFFF; border-right-color: #FFFFFF; color: black;}
+.Appl input:active {background-color: #FFFFFF;}
+.Appl .Grid > div {background-color: hsl(0, 0%, 100%);}
+
+@media (max-width: 1200px)
+{
+  .Grid{grid-template-columns: repeat(3,1fr);}
+  .cwrapper{width: 50%;}
+  .flag{width: 50%;}
+  .sa2{margin-left: 15px;}
+}
+
+@media (max-width: 900px)
+{
+  .Grid{grid-template-columns: repeat(2,1fr);}
+   .detail {
+    flex-direction: column;
+  }
+  .flag{
+    width: 100%;
+  }
+  .cwrapper{
+    width: 100%;
+    padding-left: 0px;
+  }
+  .sa{ width: 100%;}
+  .sa2{ margin: 0px;}
+  .border{
+  margin: 8px;
+  margin-left: 0px;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .Grid{
+    grid-template-columns: repeat(1,1fr);
+    padding-left: 40px; padding-right: 40px;
+  }
+  .nav{
+    padding-left: 20px; padding-right: 20px;
+  }
+  .Filters{
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+  }
+  .Sea { top: 60px;}
+  
+  input[type='text']{padding-left: 40px; width: 100%;}
+  .nav h2 {font-size: 20px;}
+  .Home{padding-top: 50px;}
+
+  .rwrapper{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 350px) {
+  html {font-size: 14px;}
+  .nav h2{font-size: 16px;}
+  .nav {padding : 15px}
+  .Home {padding-top: 60px;}
+  .but {padding-top: 110px; padding-left: 30px;}
+  .detail{ padding-top: 40px; padding: 40px 30px;}
+  .nav div{ width:87px ;}
+}
+
