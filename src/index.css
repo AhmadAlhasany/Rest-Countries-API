@@ -46,7 +46,7 @@ strong {font-weight: 800; display: block;}
 .but {padding-top: 115px; padding-left: 50px;}
 .arrow {margin-right: 15px;}
 small {font-size: inherit; font-weight: 600;}
-.button {width: 120px; height: 40px; justify-content: center; border-radius: 5px;}
+.button {width: 120px; height: 40px; justify-content: center; border-radius: 5px; user-select: none;}
 
 .detail{padding: 50px; align-items: flex-start;}
 .flag{ height: auto ; width: 600px;}
@@ -58,7 +58,7 @@ small {font-size: inherit; font-weight: 600;}
 
 .blo {width: 100%;}
 .blo div { display: inline-block;}
-.border { margin:5px;  padding:7px; width: auto; height: auto;  border-radius: 5px;}
+.border { margin:5px;  padding:7px; width: auto; height: auto;  border-radius: 5px; user-select: none;}
 .border small {font-weight: 300;}
  
 a {text-decoration: none; color: inherit;}
