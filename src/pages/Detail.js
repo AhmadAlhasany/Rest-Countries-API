@@ -7,7 +7,14 @@ import Border from '../components/Border'
 
 function Detail() {
   const {id} = useParams()
+
   const target = data.filter(ele => ele.name === id)
+  
+  if (target.length === 0) {
+    // Handle the case where the country with the given id is not found
+    return <div>Country not found</div>;
+  }
+
   const top = ( target[0].topLevelDomain ? target[0].topLevelDomain.map((ele,i) => { 
     if (i)
       return ', ' + ele
@@ -33,7 +40,7 @@ function Detail() {
   return (<>
     <div className='but'>
       <div className='button rf'>
-        <Link to = ".." > 
+        <Link to = "/" > 
         <FontAwesomeIcon className = 'arrow' icon = {faArrowLeft}></FontAwesomeIcon>
         <small>Back</small>
         </Link>

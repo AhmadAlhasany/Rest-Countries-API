@@ -4,7 +4,7 @@ function Country(props) {
 
   return (
       <div className='cf'>
-        <Link to = {`${props.name}`} className='an'>
+        <Link to = {`/country/${props.name}`} className='an'>
         <div className='img'>
             <img src={props.img}/>
         </div>

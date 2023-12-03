@@ -12,7 +12,7 @@ export default function App() {
   const router = createBrowserRouter(createRoutesFromElements(
     <>
       <Route path = "/" element = {<Home f = {f} setF = {setF}/>}/>
-      <Route path = "/:id" element = {<Detail/>}/>
+      <Route path = "/country/:id" element = {<Detail/>}/>
       <Route path = "*" element = {<NotFound/>}/>
     </>
   ))
