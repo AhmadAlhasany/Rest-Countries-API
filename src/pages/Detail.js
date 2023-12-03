@@ -40,7 +40,7 @@ function Detail() {
   return (<>
     <div className='but'>
       <div className='button rf'>
-        <Link to = "/" > 
+        <Link to = "/Rest-Countries-API" > 
         <FontAwesomeIcon className = 'arrow' icon = {faArrowLeft}></FontAwesomeIcon>
         <small>Back</small>
         </Link>

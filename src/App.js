@@ -11,8 +11,8 @@ export default function App() {
   const [f, setF] = React.useState({sf : '', cf : 'Filter by Region'})
   const router = createBrowserRouter(createRoutesFromElements(
     <>
-      <Route path = "/" element = {<Home f = {f} setF = {setF}/>}/>
-      <Route path = "/country/:id" element = {<Detail/>}/>
+      <Route path = "/Rest-Countries-API/" element = {<Home f = {f} setF = {setF}/>}/>
+      <Route path = "/Rest-Countries-API/country/:id" element = {<Detail/>}/>
       <Route path = "*" element = {<NotFound/>}/>
     </>
   ))
