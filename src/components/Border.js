@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Border(props) {
   return (
-        <Link to = {`/${props.name}`} > 
+        <Link to = {`/Rest-Countries-API/country/${props.name}`} > 
           <div className='border'>
             <div>  <small>{props.name}&nbsp;</small> </div>
           </div>
