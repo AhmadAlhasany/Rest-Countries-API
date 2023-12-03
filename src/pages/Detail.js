@@ -33,10 +33,8 @@ function Detail() {
 
   const border = target[0].borders ? (target[0].borders.map((ele,i ) => {
     const codeDecihperer = data.filter(el => el.alpha3Code == ele)
-    console.log(codeDecihperer)
     return <Border name = {codeDecihperer[0].name} key = {i} />})) : 'No border countries'
 
-  console.log(border)
   return (<>
     <div className='but'>
       <div className='button rf'>

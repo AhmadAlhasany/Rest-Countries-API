@@ -20,7 +20,6 @@ function Home(props) {
     }
     ,[props.f.cf , props.f.sf])
 
-    console.log(arr)
   const countries = arr.map((ele,i )=> {return (<Country key = {i} name = {ele.name} population = {ele.population} region = {ele.region} capital = {ele.capital} img = {ele.flags.png}/>)})
 
   return (
